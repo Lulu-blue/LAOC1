@@ -1,0 +1,150 @@
+$comment
+	File created using the following command:
+		vcd file MIC1.msim.vcd -direction
+$end
+$date
+	Wed Apr 02 08:29:34 2025
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module DECODER_2X4_vlg_vec_tst $end
+$var reg 1 ! I0 $end
+$var reg 1 " I1 $end
+$var wire 1 # O0 $end
+$var wire 1 $ O1 $end
+$var wire 1 % O2 $end
+$var wire 1 & O3 $end
+$var wire 1 ' sampler $end
+$scope module i1 $end
+$var wire 1 ( gnd $end
+$var wire 1 ) vcc $end
+$var wire 1 * unknown $end
+$var tri1 1 + devclrn $end
+$var tri1 1 , devpor $end
+$var tri1 1 - devoe $end
+$var wire 1 . I0~combout $end
+$var wire 1 / I1~combout $end
+$var wire 1 0 inst~combout $end
+$var wire 1 1 inst2~0_combout $end
+$var wire 1 2 inst2~1_combout $end
+$var wire 1 3 inst2~2_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+x#
+x$
+x%
+x&
+x'
+0(
+1)
+x*
+1+
+1,
+1-
+0.
+0/
+x0
+x1
+x2
+x3
+$end
+#1187
+03
+#1189
+02
+#4626
+0&
+#4784
+0%
+#5225
+00
+#5229
+01
+#8823
+0$
+#8849
+1#
+#250000
+1!
+0'
+#250989
+1.
+#252147
+10
+#252178
+12
+#255771
+0#
+#255773
+1%
+#490000
+1"
+0!
+1'
+#490860
+1/
+#490989
+0.
+#492147
+00
+#492178
+02
+#495771
+1#
+#495773
+0%
+#496085
+10
+#496089
+11
+#499683
+1$
+#499709
+0#
+#730000
+1!
+0'
+#730989
+1.
+#732176
+13
+#732177
+01
+#735615
+1&
+#735771
+0$
+#970000
+0"
+0!
+1'
+#970860
+0/
+#970989
+0.
+#972176
+03
+#972177
+11
+#975615
+0&
+#975771
+1$
+#976085
+00
+#976089
+01
+#979683
+0$
+#979709
+1#
+#1000000
