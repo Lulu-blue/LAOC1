@@ -1,13 +1,42 @@
-|DECODER_2X4
+|ULA_1_bit
+O <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+INVA => inst7.IN0
+A => inst.IN0
+ENA => inst.IN1
+B => inst2.IN0
+ENB => inst2.IN1
+F1 => DECODER_2X4:inst11.I1
+F0 => DECODER_2X4:inst11.I0
+CIN => FULL_ADDER_1BIT:inst1.cin
+COUT <= FULL_ADDER_1BIT:inst1.cout
+
+
+|ULA_1_bit|DECODER_2X4:inst11
 O0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
-I1 => inst4.IN0
-I1 => inst1.IN1
-I1 => inst3.IN0
-I0 => inst5.IN0
-I0 => inst2.IN1
-I0 => inst3.IN1
+I0 => inst4.IN0
+I0 => inst1.IN0
+I0 => inst7.IN0
+I0 => inst3.IN0
+I1 => inst5.IN0
+I1 => inst6.IN0
+I1 => inst2.IN1
+I1 => inst3.IN1
 O1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 O2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 O3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULA_1_bit|FULL_ADDER_1BIT:inst1
+0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+cin => inst1.IN0
+cin => inst4.IN0
+A => inst.IN0
+A => inst3.IN0
+B => inst.IN1
+B => inst3.IN1
+ENB => inst2.IN1
+ENB => inst3.IN2
+ENB => inst4.IN2
+cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
