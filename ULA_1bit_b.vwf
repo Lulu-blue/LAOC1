@@ -1,3 +1,4 @@
+/* Simulator = Quartus II Simulator */
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -122,6 +123,16 @@ SIGNAL("INVA")
 	PARENT = "";
 }
 
+SIGNAL("OUTPUT")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 GROUP("F")
 {
 	MEMBERS = "F0", "F1";
@@ -130,16 +141,6 @@ GROUP("F")
 GROUP("e")
 {
 	MEMBERS = "ENA", "ENB";
-}
-
-SIGNAL("O")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "";
 }
 
 TRANSITION_LIST("A")
@@ -240,7 +241,7 @@ TRANSITION_LIST("INVA")
 	}
 }
 
-TRANSITION_LIST("O")
+TRANSITION_LIST("OUTPUT")
 {
 	NODE
 	{
@@ -362,7 +363,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "O";
+	CHANNEL = "OUTPUT";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 11;

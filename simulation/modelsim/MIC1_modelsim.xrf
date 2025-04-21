@@ -1,10 +1,12 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/Luiza/Desktop/LAOC1/ULA_1_bit.vwf
 source_file = 1, C:/Users/Luiza/Desktop/LAOC1/ULA_1_bit.bdf
 source_file = 1, C:/Users/Luiza/Desktop/LAOC1/FULL_ADDER_1BIT.vwf
 source_file = 1, C:/Users/Luiza/Desktop/LAOC1/FULL_ADDER_1BIT.bdf
 source_file = 1, C:/Users/Luiza/Desktop/LAOC1/DECODER_2X4.bdf
 source_file = 1, C:/Users/Luiza/Desktop/LAOC1/DECODER_2X4.vwf
+source_file = 1, C:/Users/Luiza/Desktop/LAOC1/ULA_1bit_b.vwf
+source_file = 1, C:/Users/Luiza/Desktop/LAOC1/ULA_1bit.vwf
+source_file = 1, C:/Users/Luiza/Desktop/LAOC1/ULA_1_bit.vwf
 source_file = 1, C:/Users/Luiza/Desktop/LAOC1/db/MIC1.cbx.xml
 design_name = ULA_1_bit
 instance = comp, \F1~I , F1, ULA_1_bit, 1
