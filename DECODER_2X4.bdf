@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 104 152 272 168)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I1" (rect 5 0 14 12)(font "Arial" ))
+	(text "I0" (rect 5 0 15 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -37,9 +37,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 288 160 456 176)
+	(rect 280 160 448 176)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I0" (rect 5 0 14 12)(font "Arial" ))
+	(text "I1" (rect 5 0 15 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -319,7 +319,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 480 392 528 424)
+	(rect 488 384 536 416)
 	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
 	(text "inst7" (rect 3 21 26 33)(font "Arial" ))
 	(port
@@ -376,26 +376,6 @@ applicable agreement for further details.
 	(pt 496 256)
 )
 (connector
-	(pt 528 352)
-	(pt 536 352)
-)
-(connector
-	(pt 536 352)
-	(pt 600 352)
-)
-(connector
-	(pt 272 352)
-	(pt 488 352)
-)
-(connector
-	(pt 456 168)
-	(pt 464 168)
-)
-(connector
-	(pt 464 168)
-	(pt 464 256)
-)
-(connector
 	(pt 464 336)
 	(pt 600 336)
 )
@@ -406,10 +386,6 @@ applicable agreement for further details.
 (connector
 	(pt 272 160)
 	(pt 272 272)
-)
-(connector
-	(pt 272 272)
-	(pt 272 352)
 )
 (connector
 	(pt 408 272)
@@ -428,26 +404,6 @@ applicable agreement for further details.
 	(pt 600 480)
 )
 (connector
-	(pt 464 256)
-	(pt 464 336)
-)
-(connector
-	(pt 480 408)
-	(pt 464 408)
-)
-(connector
-	(pt 464 336)
-	(pt 464 408)
-)
-(connector
-	(pt 464 408)
-	(pt 464 480)
-)
-(connector
-	(pt 528 408)
-	(pt 592 408)
-)
-(connector
 	(pt 656 416)
 	(pt 760 416)
 )
@@ -456,19 +412,76 @@ applicable agreement for further details.
 	(pt 272 424)
 )
 (connector
+	(pt 272 424)
+	(pt 272 496)
+)
+(connector
+	(pt 592 408)
+	(pt 584 408)
+)
+(connector
+	(pt 272 352)
+	(pt 488 352)
+)
+(connector
+	(pt 272 272)
+	(pt 272 352)
+)
+(connector
 	(pt 272 352)
 	(pt 272 424)
 )
 (connector
-	(pt 272 424)
-	(pt 272 496)
+	(pt 528 352)
+	(pt 536 352)
+)
+(connector
+	(pt 536 352)
+	(pt 600 352)
+)
+(connector
+	(pt 584 408)
+	(pt 584 400)
+)
+(connector
+	(pt 464 336)
+	(pt 464 400)
+)
+(connector
+	(pt 464 400)
+	(pt 464 480)
+)
+(connector
+	(pt 464 400)
+	(pt 488 400)
+)
+(connector
+	(pt 528 400)
+	(pt 536 400)
+)
+(connector
+	(pt 536 400)
+	(pt 584 400)
+)
+(connector
+	(pt 464 168)
+	(pt 464 256)
+)
+(connector
+	(pt 464 256)
+	(pt 464 336)
+)
+(connector
+	(pt 448 168)
+	(pt 464 168)
 )
 (junction (pt 544 256))
-(junction (pt 536 352))
 (junction (pt 272 272))
 (junction (pt 464 256))
-(junction (pt 272 352))
 (junction (pt 416 272))
 (junction (pt 464 336))
-(junction (pt 464 408))
 (junction (pt 272 424))
+(junction (pt 464 400))
+(junction (pt 272 352))
+(junction (pt 536 352))
+(junction (pt 536 400))
