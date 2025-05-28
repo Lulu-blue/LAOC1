@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIC1
-Wed May 07 08:14:09 2025
+Wed May 28 16:22:12 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,12 +10,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -41,20 +36,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 07 08:14:09 2025           ;
+; Analysis & Synthesis Status        ; Failed - Wed May 28 16:22:12 2025               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MIC1                                            ;
-; Top-level Entity Name              ; ULA_8_bits                                      ;
+; Top-level Entity Name              ; SHIFTER                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 49                                              ;
-;     Total combinational functions  ; 49                                              ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 31                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -63,7 +58,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; ULA_8_bits         ; MIC1               ;
+; Top-level entity name                                                      ; SHIFTER            ; MIC1               ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -153,106 +148,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                     ; Library ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------+---------+
-; ULA_1_bit.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Luiza/Desktop/LAOC1/ULA_1_bit.bdf       ;         ;
-; FULL_ADDER_1BIT.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Luiza/Desktop/LAOC1/FULL_ADDER_1BIT.bdf ;         ;
-; DECODER_2X4.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Luiza/Desktop/LAOC1/DECODER_2X4.bdf     ;         ;
-; ULA_8_bits.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Luiza/Desktop/LAOC1/ULA_8_bits.bdf      ;         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------+---------+
-
-
-+-----------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                             ;
-+---------------------------------------------+-------------------------------------------+
-; Resource                                    ; Usage                                     ;
-+---------------------------------------------+-------------------------------------------+
-; Estimated Total logic elements              ; 49                                        ;
-;                                             ;                                           ;
-; Total combinational functions               ; 49                                        ;
-; Logic element usage by number of LUT inputs ;                                           ;
-;     -- 4 input functions                    ; 25                                        ;
-;     -- 3 input functions                    ; 9                                         ;
-;     -- <=2 input functions                  ; 15                                        ;
-;                                             ;                                           ;
-; Logic elements by mode                      ;                                           ;
-;     -- normal mode                          ; 49                                        ;
-;     -- arithmetic mode                      ; 0                                         ;
-;                                             ;                                           ;
-; Total registers                             ; 0                                         ;
-;     -- Dedicated logic registers            ; 0                                         ;
-;     -- I/O registers                        ; 0                                         ;
-;                                             ;                                           ;
-; I/O pins                                    ; 31                                        ;
-; Embedded Multiplier 9-bit elements          ; 0                                         ;
-; Maximum fan-out node                        ; ULA_1_bit:inst|DECODER_2X4:inst11|inst2~0 ;
-; Maximum fan-out                             ; 16                                        ;
-; Total fan-out                               ; 166                                       ;
-; Average fan-out                             ; 2.08                                      ;
-+---------------------------------------------+-------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
-; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Library Name ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
-; |ULA_8_bits                   ; 49 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |ULA_8_bits                                       ; work         ;
-;    |ULA_1_bit:inst1|          ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst1                       ; work         ;
-;       |FULL_ADDER_1BIT:inst1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst1|FULL_ADDER_1BIT:inst1 ; work         ;
-;    |ULA_1_bit:inst2|          ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst2                       ; work         ;
-;       |FULL_ADDER_1BIT:inst1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst2|FULL_ADDER_1BIT:inst1 ; work         ;
-;    |ULA_1_bit:inst3|          ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst3                       ; work         ;
-;       |FULL_ADDER_1BIT:inst1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst3|FULL_ADDER_1BIT:inst1 ; work         ;
-;    |ULA_1_bit:inst4|          ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst4                       ; work         ;
-;       |FULL_ADDER_1BIT:inst1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst4|FULL_ADDER_1BIT:inst1 ; work         ;
-;    |ULA_1_bit:inst5|          ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst5                       ; work         ;
-;       |FULL_ADDER_1BIT:inst1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst5|FULL_ADDER_1BIT:inst1 ; work         ;
-;    |ULA_1_bit:inst6|          ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst6                       ; work         ;
-;       |FULL_ADDER_1BIT:inst1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst6|FULL_ADDER_1BIT:inst1 ; work         ;
-;    |ULA_1_bit:inst7|          ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst7                       ; work         ;
-;       |FULL_ADDER_1BIT:inst1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst7|FULL_ADDER_1BIT:inst1 ; work         ;
-;    |ULA_1_bit:inst|           ; 7 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst                        ; work         ;
-;       |DECODER_2X4:inst11|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst|DECODER_2X4:inst11     ; work         ;
-;       |FULL_ADDER_1BIT:inst1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ULA_8_bits|ULA_1_bit:inst|FULL_ADDER_1BIT:inst1  ; work         ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed May 07 08:14:08 2025
+    Info: Processing started: Wed May 28 16:22:11 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIC1 -c MIC1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file ula_1_bit.bdf
@@ -265,20 +167,53 @@ Info (12021): Found 1 design units, including 1 entities, in source file ula_8_b
     Info (12023): Found entity 1: ULA_8_bits
 Info (12021): Found 1 design units, including 1 entities, in source file ula_32_bits.bdf
     Info (12023): Found entity 1: ULA_32_bits
-Info (12127): Elaborating entity "ULA_8_bits" for the top level hierarchy
-Info (12128): Elaborating entity "ULA_1_bit" for hierarchy "ULA_1_bit:inst7"
-Info (12128): Elaborating entity "DECODER_2X4" for hierarchy "ULA_1_bit:inst7|DECODER_2X4:inst11"
-Info (12128): Elaborating entity "FULL_ADDER_1BIT" for hierarchy "ULA_1_bit:inst7|FULL_ADDER_1BIT:inst1"
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 22 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 49 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4586 megabytes
-    Info: Processing ended: Wed May 07 08:14:09 2025
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Info (12021): Found 1 design units, including 1 entities, in source file registrador_8bit.bdf
+    Info (12023): Found entity 1: REGISTRADOR_8BIT
+Info (12021): Found 1 design units, including 1 entities, in source file shifter.bdf
+    Info (12023): Found entity 1: SHIFTER
+Info (12021): Found 1 design units, including 1 entities, in source file registrador_32bit.bdf
+    Info (12023): Found entity 1: REGISTRADOR_32BIT
+Info (12127): Elaborating entity "SHIFTER" for the top level hierarchy
+Warning (275008): Primitive "GND" of instance "inst666" not used
+Warning (275008): Primitive "WIRE" of instance "inst7" not used
+Warning (275008): Primitive "WIRE" of instance "inst8" not used
+Info (12128): Elaborating entity "DECODER_2X4" for hierarchy "DECODER_2X4:inst12"
+Error (12009): Node "SLL8_OUT[31]" is missing source
+Error (12009): Node "SLL8_OUT[30]" is missing source
+Error (12009): Node "SLL8_OUT[29]" is missing source
+Error (12009): Node "SLL8_OUT[28]" is missing source
+Error (12009): Node "SLL8_OUT[27]" is missing source
+Error (12009): Node "SLL8_OUT[26]" is missing source
+Error (12009): Node "SLL8_OUT[25]" is missing source
+Error (12009): Node "SLL8_OUT[24]" is missing source
+Error (12009): Node "SLL8_OUT[23]" is missing source
+Error (12009): Node "SLL8_OUT[22]" is missing source
+Error (12009): Node "SLL8_OUT[21]" is missing source
+Error (12009): Node "SLL8_OUT[20]" is missing source
+Error (12009): Node "SLL8_OUT[19]" is missing source
+Error (12009): Node "SLL8_OUT[18]" is missing source
+Error (12009): Node "SLL8_OUT[17]" is missing source
+Error (12009): Node "SLL8_OUT[16]" is missing source
+Error (12009): Node "SLL8_OUT[15]" is missing source
+Error (12009): Node "SLL8_OUT[14]" is missing source
+Error (12009): Node "SLL8_OUT[13]" is missing source
+Error (12009): Node "SLL8_OUT[12]" is missing source
+Error (12009): Node "SLL8_OUT[11]" is missing source
+Error (12009): Node "SLL8_OUT[10]" is missing source
+Error (12009): Node "SLL8_OUT[9]" is missing source
+Error (12009): Node "SLL8_OUT[8]" is missing source
+Error (12009): Node "SLL8_OUT[7]" is missing source
+Error (12009): Node "SLL8_OUT[6]" is missing source
+Error (12009): Node "SLL8_OUT[5]" is missing source
+Error (12009): Node "SLL8_OUT[4]" is missing source
+Error (12009): Node "SLL8_OUT[3]" is missing source
+Error (12009): Node "SLL8_OUT[2]" is missing source
+Error (12009): Node "SLL8_OUT[1]" is missing source
+Error (12009): Node "SLL8_OUT[0]" is missing source
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 32 errors, 4 warnings
+    Error: Peak virtual memory: 4571 megabytes
+    Error: Processing ended: Wed May 28 16:22:12 2025
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:01
 
 
